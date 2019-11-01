@@ -1,0 +1,5 @@
+type Query { messages: [Message], users:[User] }
+type User { id: ID, name: String }
+type Message { content: String, user_id_from: ID, user_id_to: ID, created_at: String }
+type Mutation { pushMessage(content: String!, user_id_from: ID, user_id_to: ID, created_at: String): Message }
+type Subscription { newMessage: Message }
